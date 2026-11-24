@@ -1,0 +1,3332 @@
+﻿<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>विनोद ♥ अनिता · शुभ विवाह</title>
+    <script>
+      document.documentElement.className = "js";
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&family=Tiro+Devanagari+Hindi&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fbf7f6;
+        --surf: #f4ebea;
+        --card: #fff;
+        --ink: #3a2c33;
+        --mute: #7d6b72;
+        --line: #eadcdc;
+        --rose: #c9737f;
+        --rose-bg: #f8e6e8;
+        --sage: #7f9f86;
+        --sage-bg: #e6efe7;
+        --gold: #b99345;
+        --gold-bg: #f5ecd6;
+        --cdA: #5b3a4a;
+        --cdB: #b5606f;
+        --oncd: #fff;
+        --onrose: #fff;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #18121a;
+          --surf: #241a25;
+          --card: #211821;
+          --ink: #f4e9ec;
+          --mute: #b5a2aa;
+          --line: #3a2d3a;
+          --rose: #e8a0aa;
+          --rose-bg: #3a2530;
+          --sage: #a9c8ae;
+          --sage-bg: #243127;
+          --gold: #e3c37e;
+          --gold-bg: #37301f;
+          --cdA: #7a4a5d;
+          --cdB: #c97b88;
+          --onrose: #2a1620;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #18121a;
+        --surf: #241a25;
+        --card: #211821;
+        --ink: #f4e9ec;
+        --mute: #b5a2aa;
+        --line: #3a2d3a;
+        --rose: #e8a0aa;
+        --rose-bg: #3a2530;
+        --sage: #a9c8ae;
+        --sage-bg: #243127;
+        --gold: #e3c37e;
+        --gold-bg: #37301f;
+        --cdA: #7a4a5d;
+        --cdB: #c97b88;
+        --onrose: #2a1620;
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        overflow-x: hidden;
+        font-family:
+          "Noto Sans Devanagari",
+          "Figtree",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      body.lock {
+        overflow: hidden;
+      }
+      .serif {
+        font-family:
+          "Tiro Devanagari Hindi", "Noto Serif Devanagari", Georgia, serif;
+        font-weight: 400;
+      }
+      .bar {
+        position: fixed;
+        top: env(safe-area-inset-top, 0px);
+        left: 0;
+        right: 0;
+        height: 2px;
+        z-index: 20;
+        transform-origin: left;
+        transform: scaleX(0);
+        background: linear-gradient(90deg, var(--rose), var(--gold));
+      }
+      .col {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 0 22px;
+      }
+      .mute {
+        color: var(--mute);
+      }
+      main {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* petals */
+      .petals {
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .petal {
+        position: absolute;
+        top: -24px;
+        width: var(--s);
+        height: calc(var(--s) * 1.3);
+        background: var(--rose);
+        opacity: 0.3;
+        border-radius: 60% 0 60% 40%;
+        animation: fall var(--dur) linear var(--del) infinite;
+      }
+      @keyframes fall {
+        from {
+          transform: translate3d(0, -6vh, 0) rotate(0);
+        }
+        to {
+          transform: translate3d(var(--dx), 112vh, 0) rotate(560deg);
+        }
+      }
+
+      /* ---- timed intro (story style) ---- */
+      .intro {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        background: radial-gradient(
+          circle at 50% 30%,
+          var(--rose-bg),
+          var(--bg) 70%
+        );
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        text-align: center;
+        padding: calc(30px + env(safe-area-inset-top, 0px)) 24px
+          calc(30px + env(safe-area-inset-bottom, 0px));
+        transition: opacity 0.9s ease;
+        cursor: pointer;
+      }
+      .js .intro {
+        display: flex;
+      }
+      .intro {
+        touch-action: none;
+        overscroll-behavior: none;
+      }
+      .intro.gone {
+        opacity: 0;
+        pointer-events: none;
+        will-change: opacity;
+      }
+      .intro.love .segs,
+      .intro.love .skip,
+      .intro.love .ringwrap,
+      .intro.love .scrs,
+      .intro.love .act2 {
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+      }
+      .love {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        pointer-events: none;
+      }
+      .intro.love .love {
+        display: flex;
+      }
+      .hw {
+        position: relative;
+        width: 150px;
+        height: 140px;
+        display: grid;
+        place-items: center;
+      }
+      .hw svg {
+        width: 100%;
+        overflow: visible;
+        animation: dhak 1.1s ease-in-out 1.15s 2;
+      }
+      .hp {
+        fill: var(--rose);
+        fill-opacity: 0;
+        stroke: var(--rose);
+        stroke-width: 3;
+        stroke-linejoin: round;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        animation:
+          drawh 1s ease 0.25s forwards,
+          fillh 0.6s ease 1.05s forwards;
+      }
+      @keyframes drawh {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes fillh {
+        to {
+          fill-opacity: 1;
+        }
+      }
+      @keyframes dhak {
+        0%,
+        60%,
+        100% {
+          transform: scale(1);
+        }
+        12% {
+          transform: scale(1.22);
+        }
+        24% {
+          transform: scale(1.04);
+        }
+        38% {
+          transform: scale(1.16);
+        }
+      }
+      .hw .rg {
+        position: absolute;
+        inset: 20px;
+        border: 2px solid var(--rose);
+        border-radius: 50%;
+        opacity: 0;
+        animation: rip 1.7s ease-out 1.15s forwards;
+      }
+      @keyframes rip {
+        0% {
+          transform: scale(0.4);
+          opacity: 0.6;
+        }
+        100% {
+          transform: scale(3.6);
+          opacity: 0;
+        }
+      }
+      .love p {
+        font-family: "Tiro Devanagari Hindi", Georgia, serif;
+        font-size: 1.35rem;
+        opacity: 0;
+        animation: rise 1s ease 1.2s forwards;
+      }
+      .segs {
+        position: absolute;
+        top: calc(14px + env(safe-area-inset-top, 0px));
+        left: 18px;
+        right: 18px;
+        display: flex;
+        gap: 6px;
+      }
+      .segs i {
+        flex: 1;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--line);
+        position: relative;
+        overflow: hidden;
+      }
+      .segs i::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--rose);
+        transform-origin: left;
+        transform: scaleX(0);
+      }
+      .segs i.full::after {
+        transform: scaleX(1);
+      }
+      .segs i.act::after {
+        animation: fillseg 2.6s linear forwards;
+      }
+      @keyframes fillseg {
+        to {
+          transform: scaleX(1);
+        }
+      }
+      .skip {
+        position: absolute;
+        top: calc(28px + env(safe-area-inset-top, 0px));
+        right: 14px;
+        background: none;
+        border: 0;
+        color: var(--mute);
+        font:
+          500 0.85rem "Noto Sans Devanagari",
+          sans-serif;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+      .ringwrap {
+        position: relative;
+        width: 210px;
+        height: 210px;
+        animation: breathe 6s ease-in-out infinite;
+      }
+      @keyframes breathe {
+        50% {
+          transform: scale(1.035);
+        }
+      }
+      .ringwrap svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+      .track {
+        fill: none;
+        stroke: var(--line);
+        stroke-width: 2;
+      }
+      .enso {
+        fill: none;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        transition:
+          stroke-dashoffset 2.6s cubic-bezier(0.45, 0.05, 0.25, 1),
+          opacity 0.4s;
+      }
+      .disc {
+        fill: var(--rose);
+        transform-origin: 80px 80px;
+        transform: scale(0);
+        transition: transform 0.6s cubic-bezier(0.2, 1.3, 0.4, 1) 0.2s;
+      }
+      .tick {
+        fill: none;
+        stroke: var(--onrose);
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 0.6s 0.6s ease;
+      }
+      .intro.done .disc {
+        transform: scale(0.86);
+      }
+      .intro.done .tick {
+        stroke-dashoffset: 0;
+      }
+      .intro.done .enso {
+        opacity: 0;
+      }
+      .inits {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 2.2rem;
+        transition: opacity 0.3s;
+      }
+      .inits i {
+        font-style: normal;
+        color: var(--rose);
+        font-size: 1.2rem;
+      }
+      .intro.done .inits {
+        opacity: 0;
+      }
+      .scrs {
+        display: grid;
+        min-height: 150px;
+        width: 100%;
+        max-width: 420px;
+      }
+      .scr {
+        grid-area: 1/1;
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity 0.8s,
+          transform 0.8s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .scr.on {
+        opacity: 1;
+        transform: none;
+      }
+      .scr small {
+        font-size: 0.98rem;
+        color: var(--mute);
+      }
+      .scr b {
+        font-family: "Tiro Devanagari Hindi", Georgia, serif;
+        font-weight: 400;
+        font-size: clamp(2.4rem, 11vw, 3.4rem);
+        line-height: 1.2;
+      }
+      .scr .r {
+        color: var(--rose);
+      }
+      .act2 {
+        height: 56px;
+        display: grid;
+        place-items: center;
+      }
+      .act2 > * {
+        grid-area: 1/1;
+        transition: opacity 0.5s;
+      }
+      .tap {
+        font-size: 0.82rem;
+        color: var(--mute);
+      }
+      .ringwrap .gn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 114px;
+        height: 131px;
+        margin: -64px 0 0 -57px;
+        overflow: visible;
+        transition: opacity 0.7s;
+      }
+      .intro:not(.s0) .ringwrap .gn {
+        opacity: 0;
+      }
+      .intro.s0 .inits {
+        opacity: 0;
+      }
+      .gn .f {
+        fill: var(--card);
+      }
+      .gn .f2 {
+        fill: var(--rose-bg);
+      }
+      .gn text {
+        font-family: "Tiro Devanagari Hindi", serif;
+      }
+      .intro .gn .d {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        animation: dr 1.1s ease forwards;
+        animation-delay: var(--t, 0s);
+      }
+      .intro .gn .f,
+      .intro .gn .f2 {
+        fill-opacity: 0;
+        animation:
+          dr 1.1s ease forwards,
+          fo 0.7s ease forwards;
+        animation-delay: var(--t, 0s), calc(var(--t, 0s) + 1s);
+      }
+      .intro .gn text {
+        opacity: 0;
+        animation: fo 0.8s ease 2.2s forwards;
+      }
+      @keyframes dr {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes fo {
+        to {
+          fill-opacity: 1;
+          opacity: 1;
+        }
+      }
+      .gnh {
+        width: 96px;
+        height: 110px;
+        margin-bottom: -4px;
+      }
+      .gnh .gn {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        animation: breathe 7s ease-in-out infinite;
+      }
+      .hero .to {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--rose);
+        max-width: 360px;
+      }
+      .scr b.sm {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+      }
+      .mus {
+        position: fixed;
+        right: 14px;
+        bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+        z-index: 70;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--rose);
+        font-size: 1.15rem;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+      .open {
+        opacity: 0;
+        pointer-events: none;
+        border: 0;
+        border-radius: 999px;
+        background: var(--rose);
+        color: var(--onrose);
+        font:
+          600 1rem "Noto Sans Devanagari",
+          sans-serif;
+        padding: 14px 34px;
+        cursor: pointer;
+      }
+      .intro.done .open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .intro.done .tap {
+        opacity: 0;
+      }
+      button:focus-visible,
+      summary:focus-visible,
+      .btn:focus-visible {
+        outline: 3px solid var(--rose);
+        outline-offset: 3px;
+      }
+
+      /* ---- hero ---- */
+      .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 18px;
+        background: radial-gradient(
+          ellipse at 50% 20%,
+          var(--rose-bg),
+          transparent 65%
+        );
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .hero .om {
+        font-size: 0.85rem;
+        color: var(--mute);
+      }
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.4rem);
+        line-height: 1.1;
+        color: var(--rose);
+      }
+      .names {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: "Tiro Devanagari Hindi", Georgia, serif;
+        font-size: clamp(1.9rem, 8vw, 2.5rem);
+      }
+      .names i {
+        font-style: normal;
+        color: var(--rose);
+        font-size: 1.5rem;
+      }
+      .js .names span,
+      .js .names i {
+        opacity: 0;
+      }
+      .opened .names span:first-child {
+        animation: inL 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) 0.7s both;
+      }
+      .opened .names span:last-child {
+        animation: inR 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) 0.8s both;
+      }
+      .opened .names i {
+        animation:
+          pop 1s cubic-bezier(0.2, 1.5, 0.4, 1) 1.4s both,
+          dhak 2.6s ease-in-out 2.6s infinite;
+      }
+      @keyframes inL {
+        from {
+          opacity: 0;
+          transform: translateX(-46px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes inR {
+        from {
+          opacity: 0;
+          transform: translateX(46px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes pop {
+        from {
+          opacity: 0;
+          transform: scale(0);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .hero .date {
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      .hero .inv {
+        font-size: 0.95rem;
+        color: var(--mute);
+        max-width: 380px;
+      }
+      .js .hero .a {
+        opacity: 0;
+      }
+      .opened .hero .a {
+        animation: rise 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+        animation-delay: var(--d, 0s);
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(22px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .flow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.8rem;
+        color: var(--mute);
+        margin-top: 12px;
+      }
+      .flow span {
+        width: 1px;
+        height: 34px;
+        background: var(--line);
+        position: relative;
+        overflow: hidden;
+      }
+      .flow span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -14px;
+        width: 1px;
+        height: 14px;
+        background: var(--rose);
+        animation: drip 2.4s ease-in-out infinite;
+      }
+      @keyframes drip {
+        to {
+          top: 36px;
+        }
+      }
+
+      /* ---- sections ---- */
+      .blk {
+        padding: 64px 0 8px;
+      }
+      .sh {
+        font-family: "Tiro Devanagari Hindi", Georgia, serif;
+        text-align: center;
+        font-size: 1.15rem;
+        line-height: 1.9;
+        margin: 0 auto 26px;
+        max-width: 420px;
+      }
+      .js .sh .w {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(8px);
+        filter: blur(4px);
+        transition:
+          opacity 0.9s,
+          transform 0.9s,
+          filter 0.9s;
+        transition-delay: calc(var(--i) * 0.11s);
+      }
+      .js .sh.in .w {
+        opacity: 1;
+        transform: none;
+        filter: none;
+      }
+      footer .sh {
+        margin-bottom: 34px;
+        color: var(--ink);
+      }
+      .js .rv {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 1s ease,
+          transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .js .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      h2 {
+        font-size: 1.7rem;
+        line-height: 1.3;
+        text-align: center;
+      }
+      .sub {
+        text-align: center;
+        color: var(--mute);
+        font-size: 0.9rem;
+        margin: 4px 0 14px;
+      }
+      .lot {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--gold);
+        margin: 0 auto 30px;
+        max-width: 200px;
+        font-size: 0.9rem;
+      }
+      .lot::before,
+      .lot::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+      .lot::before {
+        content: "";
+      }
+      .lot span {
+        line-height: 1;
+      }
+
+      #tl {
+        position: relative;
+        padding-left: 36px;
+      }
+      #tl::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        bottom: 10px;
+        width: 1px;
+        background: var(--line);
+      }
+      #fill {
+        position: absolute;
+        left: 11px;
+        top: 10px;
+        width: 3px;
+        height: 0;
+        border-radius: 3px;
+        background: linear-gradient(var(--rose), var(--sage));
+      }
+      .row {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .row .dot {
+        position: absolute;
+        left: -35px;
+        top: 50%;
+        margin-top: -12px;
+        padding-top: 3px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 2px solid var(--line);
+        display: grid;
+        place-items: center;
+        font-size: 0.75rem;
+        font-style: normal;
+        color: transparent;
+        transition: 0.6s;
+      }
+      .row.done .dot {
+        background: var(--sage);
+        border-color: var(--sage);
+        color: var(--bg);
+      }
+      .ico {
+        flex: none;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+      }
+      .ico.r {
+        background: var(--rose-bg);
+      }
+      .ico.s {
+        background: var(--sage-bg);
+      }
+      .ico.g {
+        background: var(--gold-bg);
+      }
+      .row h3 {
+        font-size: 1.02rem;
+        font-weight: 500;
+        line-height: 1.35;
+      }
+      .row p {
+        font-size: 0.84rem;
+        color: var(--mute);
+      }
+      .row .t {
+        margin-left: auto;
+        text-align: right;
+        font-weight: 500;
+        font-size: 0.88rem;
+        white-space: nowrap;
+        color: var(--rose);
+      }
+
+      .cd {
+        margin-top: 36px;
+        background: linear-gradient(140deg, var(--cdA), var(--cdB));
+        color: var(--oncd);
+        border-radius: 30px;
+        padding: 28px 22px;
+        text-align: center;
+      }
+      .cd p {
+        opacity: 0.9;
+        font-size: 0.92rem;
+      }
+      .cd .n {
+        display: flex;
+        gap: 10px;
+        margin: 16px 0;
+      }
+      .cd .n div {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        padding: 12px 4px;
+      }
+      .cd .n b {
+        display: block;
+        font:
+          400 1.9rem "Tiro Devanagari Hindi",
+          Georgia,
+          serif;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.2;
+      }
+      .cd .n span {
+        font-size: 0.75rem;
+        opacity: 0.85;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 26px 18px;
+        text-align: center;
+      }
+      .av {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+        display: grid;
+        place-items: center;
+        font:
+          400 1.8rem "Tiro Devanagari Hindi",
+          Georgia,
+          serif;
+        color: #fff;
+      }
+      .card h3 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+      }
+      .card p {
+        font-size: 0.86rem;
+        color: var(--mute);
+        margin-top: 6px;
+      }
+      .sang {
+        display: flex;
+        justify-content: center;
+        margin: -8px 0;
+        position: relative;
+        z-index: 2;
+      }
+      .sang div {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--rose);
+        color: var(--onrose);
+        display: grid;
+        place-items: center;
+        border: 4px solid var(--bg);
+        animation: breathe 5s ease-in-out infinite;
+      }
+      details {
+        border-bottom: 1px solid var(--line);
+      }
+      summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 17px 4px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: "+";
+        font-size: 1.4rem;
+        color: var(--rose);
+        transition: transform 0.4s;
+      }
+      details[open] summary::after {
+        transform: rotate(45deg);
+      }
+      details p {
+        padding: 0 4px 18px;
+        font-size: 0.92rem;
+        color: var(--mute);
+      }
+      details p b {
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      .slide {
+        position: relative;
+        height: 68px;
+        border-radius: 34px;
+        background: var(--rose-bg);
+        overflow: hidden;
+        user-select: none;
+        touch-action: none;
+      }
+      .slide .lbl {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding-left: 56px;
+        font-weight: 500;
+        color: var(--rose);
+        font-size: 0.95rem;
+        text-align: center;
+      }
+      .slide .pf {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background: var(--rose);
+        opacity: 0.18;
+      }
+      .handle {
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 0;
+        background: var(--rose);
+        color: var(--onrose);
+        font-size: 1.4rem;
+        cursor: grab;
+        touch-action: none;
+      }
+      .slide.ok {
+        background: var(--sage);
+      }
+      .slide.ok .lbl {
+        color: #fff;
+        padding-left: 0;
+      }
+      .slide.ok .pf {
+        opacity: 0;
+      }
+      .slide.ok .handle {
+        background: #fff;
+        color: var(--sage);
+      }
+      .slide.back .handle,
+      .slide.back .pf {
+        transition:
+          transform 0.4s cubic-bezier(0.2, 1.2, 0.4, 1),
+          width 0.4s;
+      }
+      .cf {
+        position: fixed;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        z-index: 60;
+      }
+      .cf i {
+        position: absolute;
+        width: 9px;
+        height: 13px;
+        border-radius: 50% 0 50% 50%;
+      }
+      .note {
+        margin-top: 16px;
+        font-size: 0.88rem;
+        color: var(--mute);
+        text-align: center;
+      }
+
+      .ct {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .ct .av {
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      .ct h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.35;
+      }
+      .ct p {
+        font-size: 0.82rem;
+        color: var(--mute);
+      }
+      .btn {
+        margin-left: auto;
+        border: 1px solid var(--rose);
+        border-radius: 999px;
+        padding: 8px 18px;
+        font:
+          500 0.9rem "Noto Sans Devanagari",
+          sans-serif;
+        color: var(--rose);
+        text-decoration: none;
+      }
+      .btn.main {
+        display: flex;
+        justify-content: center;
+        margin: 26px 0 0;
+        background: var(--rose);
+        color: var(--onrose);
+        padding: 15px;
+        font-size: 1rem;
+      }
+
+      /* Wavy separator before footer */
+      .wave-sep {
+        margin: 0;
+        line-height: 0;
+      }
+      .wave-sep svg {
+        width: 100%;
+        height: 40px;
+      }
+      footer {
+        text-align: center;
+        padding: 56px 0 72px;
+        color: var(--mute);
+        font-size: 0.9rem;
+      }
+      footer b {
+        display: block;
+        font:
+          400 1.3rem "Tiro Devanagari Hindi",
+          Georgia,
+          serif;
+        color: var(--rose);
+        margin-bottom: 6px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition-duration: 0.01s !important;
+          animation: none !important;
+        }
+        .petals {
+          display: none;
+        }
+        .js .hero .a,
+        .js .rv,
+        .js .sh .w,
+        .js .names span,
+        .js .names i {
+          opacity: 1;
+          transform: none;
+          filter: none;
+        }
+        .segs i.act::after {
+          transform: scaleX(1);
+        }
+        .intro .gn .d {
+          stroke-dashoffset: 0;
+        }
+        .intro .gn .f,
+        .intro .gn .f2 {
+          fill-opacity: 1;
+        }
+        .intro .gn text {
+          opacity: 1;
+        }
+        .hp {
+          stroke-dashoffset: 0;
+          fill-opacity: 1;
+        }
+        .love p {
+          opacity: 1;
+        }
+      }
+      /* ---- SVG Decorations ---- */
+      .svg-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8px 0 20px;
+        opacity: 0.7;
+      }
+      .svg-divider svg {
+        width: 220px;
+        height: 32px;
+      }
+      .svg-corner {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        opacity: 0.18;
+        pointer-events: none;
+      }
+      .svg-corner.tl {
+        top: 0;
+        left: 0;
+      }
+      .svg-corner.tr {
+        top: 0;
+        right: 0;
+        transform: scaleX(-1);
+      }
+      .svg-corner.bl {
+        bottom: 0;
+        left: 0;
+        transform: scaleY(-1);
+      }
+      .svg-corner.br {
+        bottom: 0;
+        right: 0;
+        transform: scale(-1, -1);
+      }
+      .hero {
+        position: relative;
+      }
+      .lotus-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 8px 0 -4px;
+        opacity: 0.75;
+        animation: breathe 7s ease-in-out infinite;
+      }
+      .lotus-wrap svg {
+        width: 64px;
+        height: 44px;
+        overflow: visible;
+      }
+      .svg-section-top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+        opacity: 0.6;
+      }
+      .svg-section-top svg {
+        width: 180px;
+        height: 22px;
+      }
+      .open {
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.2s ease;
+      }
+
+      <!-- Decorative floating mandala dots in intro -- > .intro-mandala {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .intro-mandala svg {
+        position: absolute;
+        opacity: 0.07;
+        animation: breathe 8s ease-in-out infinite;
+      }
+      .intro-mandala svg:nth-child(1) {
+        width: 300px;
+        top: -60px;
+        left: -80px;
+        animation-delay: -2s;
+      }
+      .intro-mandala svg:nth-child(2) {
+        width: 200px;
+        bottom: -40px;
+        right: -50px;
+        animation-delay: -5s;
+      }
+      .open:disabled {
+        opacity: 0.75;
+        cursor: wait;
+      }
+      .open.shimmer {
+        background: linear-gradient(
+          90deg,
+          var(--cdA) 0%,
+          var(--rose) 50%,
+          var(--cdA) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.2s infinite linear;
+      }
+      @keyframes shimmer {
+        to {
+          background-position: -200% 0;
+        }
+      }
+      .open:hover,
+      .open:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(201, 115, 127, 0.4);
+      }
+      .open:active {
+        transform: scale(0.97);
+      }
+    </style>
+  </head>
+  <body class="lock">
+    <div class="petals" id="petals" aria-hidden="true"></div>
+    <div class="bar" id="bar"></div>
+    <button class="mus" id="mus" aria-label="संगीत चालू या बंद करें">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-volume-off preview-icon"
+      >
+        <path d="M16 9a5 5 0 0 1 .95 2.293" />
+        <path d="M19.364 5.636a9 9 0 0 1 1.889 9.96" />
+        <path d="m2 2 20 20" />
+        <path
+          d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"
+        />
+        <path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686" />
+      </svg>
+    </button>
+
+    <div class="intro s0" id="intro">
+      <div class="segs"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="intro-mandala" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle
+            cx="100"
+            cy="100"
+            r="95"
+            stroke="var(--rose)"
+            stroke-width="1"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="75"
+            stroke="var(--gold)"
+            stroke-width="1"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="55"
+            stroke="var(--rose)"
+            stroke-width="1"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="35"
+            stroke="var(--gold)"
+            stroke-width="1"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="15"
+            stroke="var(--rose)"
+            stroke-width="1"
+          />
+          <!-- 8 petals outer -->
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--rose)"
+            opacity="0.4"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--rose)"
+            opacity="0.4"
+            transform="rotate(45 100 100)"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--rose)"
+            opacity="0.4"
+            transform="rotate(90 100 100)"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--rose)"
+            opacity="0.4"
+            transform="rotate(135 100 100)"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--gold)"
+            opacity="0.3"
+            transform="rotate(22.5 100 100)"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--gold)"
+            opacity="0.3"
+            transform="rotate(67.5 100 100)"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--gold)"
+            opacity="0.3"
+            transform="rotate(112.5 100 100)"
+          />
+          <path
+            d="M100 5 Q110 50 100 95 Q90 50 100 5 Z"
+            fill="var(--gold)"
+            opacity="0.3"
+            transform="rotate(157.5 100 100)"
+          />
+          <circle cx="100" cy="100" r="8" fill="var(--rose)" opacity="0.6" />
+        </svg>
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle
+            cx="100"
+            cy="100"
+            r="90"
+            stroke="var(--rose)"
+            stroke-width="1"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="60"
+            stroke="var(--gold)"
+            stroke-width="1"
+          />
+          <path
+            d="M100 10 Q115 55 100 100 Q85 55 100 10 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+          />
+          <path
+            d="M100 10 Q115 55 100 100 Q85 55 100 10 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+            transform="rotate(60 100 100)"
+          />
+          <path
+            d="M100 10 Q115 55 100 100 Q85 55 100 10 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+            transform="rotate(120 100 100)"
+          />
+          <path
+            d="M100 10 Q115 55 100 100 Q85 55 100 10 Z"
+            fill="var(--gold)"
+            opacity="0.35"
+            transform="rotate(30 100 100)"
+          />
+          <path
+            d="M100 10 Q115 55 100 100 Q85 55 100 10 Z"
+            fill="var(--gold)"
+            opacity="0.35"
+            transform="rotate(90 100 100)"
+          />
+          <path
+            d="M100 10 Q115 55 100 100 Q85 55 100 10 Z"
+            fill="var(--gold)"
+            opacity="0.35"
+            transform="rotate(150 100 100)"
+          />
+          <circle cx="100" cy="100" r="10" fill="var(--gold)" opacity="0.5" />
+        </svg>
+      </div>
+      <button class="skip" id="skip">छोड़ें</button>
+      <div class="ringwrap">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" style="stop-color: var(--rose)" />
+              <stop offset="1" style="stop-color: var(--gold)" />
+            </linearGradient>
+          </defs>
+          <circle class="track" cx="80" cy="80" r="70" />
+          <circle
+            class="enso"
+            id="enso"
+            cx="80"
+            cy="80"
+            r="70"
+            stroke="url(#g)"
+            transform="rotate(-100 80 80)"
+          />
+          <circle class="disc" cx="80" cy="80" r="70" />
+          <path class="tick" pathLength="1" d="M52 82 L72 102 L110 58" />
+        </svg>
+        <div class="inits"><span>वि</span><i>♥</i><span>अ</span></div>
+        <svg class="gn" id="gn" viewBox="0 0 200 230" aria-hidden="true">
+          <g
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+          >
+            <circle
+              class="d"
+              pathLength="1"
+              cx="100"
+              cy="98"
+              r="88"
+              stroke="var(--gold)"
+              stroke-width="1.5"
+              style="--t: 0.1s"
+            />
+            <path
+              class="d f"
+              pathLength="1"
+              style="--t: 0.4s"
+              stroke="var(--rose)"
+              d="M64 64 C14 40 0 104 28 134 C42 148 60 134 68 112 Z"
+            />
+            <path
+              class="d f"
+              pathLength="1"
+              style="--t: 0.5s"
+              stroke="var(--rose)"
+              d="M136 64 C186 40 200 104 172 134 C158 148 140 134 132 112 Z"
+            />
+            <path
+              class="d f"
+              pathLength="1"
+              style="--t: 0.8s"
+              stroke="var(--rose)"
+              d="M66 130 C44 158 50 204 100 208 C150 204 156 158 134 130"
+            />
+            <path
+              class="d f2"
+              pathLength="1"
+              style="--t: 1.9s"
+              stroke="var(--gold)"
+              d="M100 228 C90 220 90 210 100 202 C110 210 110 220 100 228 Z"
+            />
+            <path
+              class="d f2"
+              pathLength="1"
+              style="--t: 2s"
+              stroke="var(--gold)"
+              d="M100 228 C90 220 90 210 100 202 C110 210 110 220 100 228 Z"
+              transform="rotate(-42 100 228)"
+            />
+            <path
+              class="d f2"
+              pathLength="1"
+              style="--t: 2s"
+              stroke="var(--gold)"
+              d="M100 228 C90 220 90 210 100 202 C110 210 110 220 100 228 Z"
+              transform="rotate(42 100 228)"
+            />
+            <path
+              class="d f"
+              pathLength="1"
+              style="--t: 1s"
+              stroke="var(--rose)"
+              d="M66 62 C70 46 130 46 134 62 C140 96 128 114 112 120 L88 120 C72 114 60 96 66 62 Z"
+            />
+            <path
+              class="d f"
+              pathLength="1"
+              style="--t: 1.4s"
+              stroke="var(--gold)"
+              d="M70 56 L76 28 L90 44 L100 14 L110 44 L124 28 L130 56 Z"
+            />
+            <path
+              class="d"
+              pathLength="1"
+              style="--t: 1.5s"
+              stroke="var(--gold)"
+              d="M88 68 Q100 80 112 68 M100 60 L100 78"
+            />
+            <circle
+              class="d"
+              pathLength="1"
+              style="--t: 1.6s"
+              cx="100"
+              cy="88"
+              r="3"
+              stroke="var(--rose)"
+              fill="var(--rose)"
+            />
+            <path
+              class="d"
+              pathLength="1"
+              style="--t: 1.6s"
+              stroke="var(--rose)"
+              d="M80 94 Q87 100 94 94 M106 94 Q113 100 120 94"
+            />
+            <path
+              class="d"
+              pathLength="1"
+              style="--t: 1.2s"
+              stroke="var(--gold)"
+              stroke-width="2"
+              d="M72 140 C88 166 112 184 132 196"
+            />
+            <path
+              class="d"
+              pathLength="1"
+              style="--t: 1.3s"
+              stroke="var(--rose)"
+              stroke-width="16"
+              d="M100 100 C101 128 102 148 92 162 C84 172 70 170 68 158 C67 150 76 148 80 154"
+            />
+            <path
+              class="d"
+              pathLength="1"
+              style="--t: 1.5s"
+              stroke="var(--card)"
+              stroke-width="11"
+              d="M100 100 C101 128 102 148 92 162 C84 172 70 170 68 158 C67 150 76 148 80 154"
+            />
+            <path
+              class="d"
+              pathLength="1"
+              style="--t: 1.7s"
+              stroke="var(--gold)"
+              stroke-width="5"
+              d="M114 112 C124 124 130 134 126 146"
+            />
+            <text
+              x="100"
+              y="198"
+              text-anchor="middle"
+              fill="var(--gold)"
+              stroke="none"
+              font-size="22"
+            >
+              ॐ
+            </text>
+          </g>
+        </svg>
+      </div>
+      <div class="scrs" aria-live="polite">
+        <div class="scr on">
+          <small>॥ श्री गणेशाय नमः ॥</small><b class="r">शुभ विवाह</b
+          ><small>दो दिल, एक नई शुरुआत</small>
+        </div>
+        <div class="scr">
+          <small id="gs1"></small><b class="r" id="gname"></b
+          ><small id="gs2"></small>
+        </div>
+        <div class="scr">
+          <small>चि. विनोद वेड्स सौ.का. अनिता</small
+          ><b>विनोद <span class="r">♥</span> अनिता</b>
+        </div>
+        <div class="scr">
+          <small>मंगलवार</small><b class="r">24 नवम्बर 2026</b
+          ><small>सेवद छोटी, सीकर</small>
+        </div>
+        <div class="scr">
+          <b>आपके बिना ख़ुशी अधूरी है</b
+          ><small>माली परिवार का स्नेह भरा निमंत्रण</small>
+        </div>
+      </div>
+      <div class="act2">
+        <p class="tap" id="tap">आगे बढ़ने के लिए कहीं भी टैप करें</p>
+        <button class="open" id="open">निमंत्रण खोलें</button>
+      </div>
+      <div class="love" aria-hidden="true">
+        <div class="hw">
+          <span class="rg"></span
+          ><span class="rg" style="animation-delay: 1.45s"></span
+          ><span class="rg" style="animation-delay: 1.75s"></span
+          ><svg viewBox="0 0 100 90">
+            <path
+              class="hp"
+              pathLength="1"
+              d="M50 82 C20 60 6 42 6 26 C6 14 15 6 26 6 C36 6 44 11 50 20 C56 11 64 6 74 6 C85 6 94 14 94 26 C94 42 80 60 50 82 Z"
+            />
+          </svg>
+        </div>
+        <p>दो दिल, एक धड़कन</p>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero col">
+        <!-- Corner paisley ornaments -->
+        <svg
+          class="svg-corner tl"
+          viewBox="0 0 90 90"
+          aria-hidden="true"
+          fill="none"
+        >
+          <path
+            d="M5 5 C5 5 20 8 30 20 C40 32 38 50 30 60 C22 70 10 72 5 85"
+            stroke="var(--rose)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5 5 C15 10 28 15 35 28 C42 42 36 58 25 65 C18 70 10 68 5 85"
+            stroke="var(--gold)"
+            stroke-width="1"
+            stroke-linecap="round"
+            opacity="0.6"
+          />
+          <circle cx="30" cy="20" r="2" fill="var(--rose)" />
+          <circle cx="20" cy="40" r="1.5" fill="var(--gold)" />
+          <circle cx="10" cy="62" r="1.5" fill="var(--rose)" />
+          <path
+            d="M5 5 Q12 2 18 8 Q14 14 8 12 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+          />
+          <path
+            d="M38 18 Q44 12 48 18 Q44 24 38 22 Z"
+            fill="var(--gold)"
+            opacity="0.4"
+          />
+        </svg>
+        <svg
+          class="svg-corner tr"
+          viewBox="0 0 90 90"
+          aria-hidden="true"
+          fill="none"
+        >
+          <path
+            d="M5 5 C5 5 20 8 30 20 C40 32 38 50 30 60 C22 70 10 72 5 85"
+            stroke="var(--rose)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5 5 C15 10 28 15 35 28 C42 42 36 58 25 65 C18 70 10 68 5 85"
+            stroke="var(--gold)"
+            stroke-width="1"
+            stroke-linecap="round"
+            opacity="0.6"
+          />
+          <circle cx="30" cy="20" r="2" fill="var(--rose)" />
+          <circle cx="20" cy="40" r="1.5" fill="var(--gold)" />
+          <circle cx="10" cy="62" r="1.5" fill="var(--rose)" />
+          <path
+            d="M5 5 Q12 2 18 8 Q14 14 8 12 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+          />
+          <path
+            d="M38 18 Q44 12 48 18 Q44 24 38 22 Z"
+            fill="var(--gold)"
+            opacity="0.4"
+          />
+        </svg>
+        <svg
+          class="svg-corner bl"
+          viewBox="0 0 90 90"
+          aria-hidden="true"
+          fill="none"
+        >
+          <path
+            d="M5 5 C5 5 20 8 30 20 C40 32 38 50 30 60 C22 70 10 72 5 85"
+            stroke="var(--rose)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <circle cx="30" cy="20" r="2" fill="var(--rose)" />
+          <circle cx="20" cy="40" r="1.5" fill="var(--gold)" />
+          <path
+            d="M5 5 Q12 2 18 8 Q14 14 8 12 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+          />
+        </svg>
+        <svg
+          class="svg-corner br"
+          viewBox="0 0 90 90"
+          aria-hidden="true"
+          fill="none"
+        >
+          <path
+            d="M5 5 C5 5 20 8 30 20 C40 32 38 50 30 60 C22 70 10 72 5 85"
+            stroke="var(--rose)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <circle cx="30" cy="20" r="2" fill="var(--rose)" />
+          <circle cx="20" cy="40" r="1.5" fill="var(--gold)" />
+          <path
+            d="M5 5 Q12 2 18 8 Q14 14 8 12 Z"
+            fill="var(--rose)"
+            opacity="0.5"
+          />
+        </svg>
+        <div class="gnh a" id="gnh" style="--d: 0s"></div>
+        <p class="om a" style="--d: 0.1s">
+          ॥ श्री गणेशाय नमः ॥<br />वक्रतुण्ड महाकाय, सूर्यकोटि समप्रभ ।
+        </p>
+        <h1 class="serif a" style="--d: 0.4s">शुभ विवाह</h1>
+        <div class="names"><span>विनोद</span><i>♥</i><span>अनिता</span></div>
+        <!-- Lotus decoration -->
+        <div class="lotus-wrap a" style="--d: 1.6s" aria-hidden="true">
+          <svg viewBox="0 0 64 44" fill="none">
+            <!-- Center petal -->
+            <path
+              d="M32 40 C20 28 18 14 32 8 C46 14 44 28 32 40 Z"
+              fill="var(--rose)"
+              opacity="0.5"
+              stroke="var(--rose)"
+              stroke-width="0.8"
+            />
+            <!-- Left petal -->
+            <path
+              d="M32 36 C22 30 14 20 18 10 C26 6 34 16 32 36 Z"
+              fill="var(--rose)"
+              opacity="0.35"
+              stroke="var(--rose)"
+              stroke-width="0.6"
+              transform="rotate(-25 32 36)"
+            />
+            <!-- Right petal -->
+            <path
+              d="M32 36 C22 30 14 20 18 10 C26 6 34 16 32 36 Z"
+              fill="var(--rose)"
+              opacity="0.35"
+              stroke="var(--rose)"
+              stroke-width="0.6"
+              transform="rotate(25 32 36) scale(-1,1) translate(-64,0)"
+            />
+            <!-- Outer left -->
+            <path
+              d="M32 36 C18 32 8 22 14 8 C22 2 34 14 32 36 Z"
+              fill="var(--gold)"
+              opacity="0.25"
+              stroke="var(--gold)"
+              stroke-width="0.5"
+              transform="rotate(-48 32 36)"
+            />
+            <!-- Outer right -->
+            <path
+              d="M32 36 C18 32 8 22 14 8 C22 2 34 14 32 36 Z"
+              fill="var(--gold)"
+              opacity="0.25"
+              stroke="var(--gold)"
+              stroke-width="0.5"
+              transform="rotate(48 32 36) scale(-1,1) translate(-64,0)"
+            />
+            <!-- Stamen -->
+            <circle cx="32" cy="30" r="3" fill="var(--gold)" opacity="0.8" />
+            <circle cx="32" cy="30" r="1.5" fill="var(--gold)" />
+            <!-- Water line -->
+            <path
+              d="M12 40 Q22 37 32 40 Q42 43 52 40"
+              stroke="var(--rose)"
+              stroke-width="0.8"
+              opacity="0.4"
+            />
+          </svg>
+        </div>
+        <p class="date a" style="--d: 1.9s">मंगलवार · 24 नवम्बर 2026</p>
+        <p class="to a" id="hto" style="--d: 2.1s"></p>
+        <div class="sh a" id="hsh" style="--d: 2.3s">
+          "सात फेरों की ये कहानी, सात जन्मों का साथ,<br />आप आएँ तो पूरी हो जाए,
+          हर दुआ, हर बात।"
+        </div>
+        <p class="inv a" style="--d: 2.9s">
+          परमपिता परमेश्वर की कृपा से हमारे आँगन में ख़ुशियों की शहनाई गूँज रही
+          है। आप सपरिवार पधारिए और विनोद–अनिता को अपना आशीर्वाद दीजिए।
+        </p>
+        <div class="flow a" style="--d: 3.5s">नीचे जाएँ<span></span></div>
+      </header>
+
+      <div class="col">
+        <section class="blk rv">
+          <h2 class="serif">वैवाहिक कार्यक्रम</h2>
+          <p class="sub">आपके आने की तैयारी में सजे हमारे पल</p>
+          <div class="sh">
+            "हर रस्म में बसी है मोहब्बत की ख़ुशबू,<br />हर लम्हे में सजी है
+            अपनों की आरज़ू।"
+          </div>
+          <div class="svg-divider" aria-hidden="true">
+            <svg viewBox="0 0 220 32" fill="none">
+              <!-- Left line with leaf -->
+              <line
+                x1="0"
+                y1="16"
+                x2="78"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M78 16 Q84 10 90 16 Q84 22 78 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="90"
+                y1="16"
+                x2="96"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <!-- Center mandala -->
+              <circle
+                cx="110"
+                cy="16"
+                r="10"
+                stroke="var(--gold)"
+                stroke-width="0.8"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="6"
+                stroke="var(--rose)"
+                stroke-width="0.8"
+                opacity="0.7"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="2.5"
+                fill="var(--rose)"
+                opacity="0.8"
+              />
+              <circle
+                cx="110"
+                cy="6"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="26"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="100"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="120"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle cx="103" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="103" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <!-- Right line with leaf -->
+              <line
+                x1="124"
+                y1="16"
+                x2="130"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M130 16 Q136 10 142 16 Q136 22 130 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="142"
+                y1="16"
+                x2="220"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+            </svg>
+          </div>
+          <div id="tl">
+            <div id="fill"></div>
+            <div class="row">
+              <i class="dot">✓</i>
+              <div class="ico r">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FF4500"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-flame preview-icon"
+                >
+                  <path
+                    d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3>श्री गणेश पूजन, बान</h3>
+                <p>शनिवार, 21 नवम्बर 2026</p>
+              </div>
+              <div class="t">प्रातः 09:15</div>
+            </div>
+            <div class="row">
+              <i class="dot">✓</i>
+              <div class="ico s">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#B87333"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-drum preview-icon"
+                >
+                  <path d="m2 2 8 8" />
+                  <path d="m22 2-8 8" />
+                  <ellipse cx="12" cy="9" rx="10" ry="5" />
+                  <path d="M7 13.4v7.9" />
+                  <path d="M12 14v8" />
+                  <path d="M17 13.4v7.9" />
+                  <path d="M2 9v8a10 5 0 0 0 20 0V9" />
+                </svg>
+              </div>
+              <div>
+                <h3>चाक-भात</h3>
+                <p>सोमवार, 23 नवम्बर 2026</p>
+              </div>
+              <div class="t">प्रातः 11:15</div>
+            </div>
+            <div class="row">
+              <i class="dot">✓</i>
+              <div class="ico g">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#D4AF37"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-utensils preview-icon"
+                >
+                  <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                  <path d="M7 2v20" />
+                  <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                </svg>
+              </div>
+              <div>
+                <h3>स्वरूचिभोज</h3>
+                <p>सोमवार, 23 नवम्बर 2026</p>
+              </div>
+              <div class="t">दोपहर 01:15</div>
+            </div>
+            <div class="row">
+              <i class="dot">✓</i>
+              <div class="ico r">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#8B5A2B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chess-knight preview-icon"
+                >
+                  <path
+                    d="M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"
+                  />
+                  <path
+                    d="M16.5 18c1-2 2.5-5 2.5-9a7 7 0 0 0-7-7H6.635a1 1 0 0 0-.768 1.64L7 5l-2.32 5.802a2 2 0 0 0 .95 2.526l2.87 1.456"
+                  />
+                  <path d="m15 5 1.425-1.425" />
+                  <path d="m17 8 1.53-1.53" />
+                  <path d="M9.713 12.185 7 18" />
+                </svg>
+              </div>
+              <div>
+                <h3>निकासी</h3>
+                <p>मंगलवार, 24 नवम्बर 2026</p>
+              </div>
+              <div class="t">दोपहर 01:15</div>
+            </div>
+            <div class="row">
+              <i class="dot">✓</i>
+              <div class="ico s">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FF4500"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-flame-kindling preview-icon"
+                >
+                  <path
+                    d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10a5 5 0 1 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C8 4.5 11 2 12 2Z"
+                  />
+                  <path d="m5 22 14-4" />
+                  <path d="m5 18 14 4" />
+                </svg>
+              </div>
+              <div>
+                <h3>पाणिग्रहण संस्कार</h3>
+                <p>मंगलवार, 24 नवम्बर 2026</p>
+              </div>
+              <div class="t">रात्रि<br />शुभलग्नानुसार</div>
+            </div>
+          </div>
+          <div class="cd">
+            <p>बस थोड़ा इंतज़ार, फिर गूँजेंगी शहनाइयाँ</p>
+            <div class="n">
+              <div><b id="d">0</b><span>दिन</span></div>
+              <div><b id="h">0</b><span>घंटे</span></div>
+              <div><b id="m">0</b><span>मिनट</span></div>
+              <div><b id="s">0</b><span>सेकंड</span></div>
+            </div>
+            <p id="cdmsg">
+              बारात 24 नवम्बर 2026 को सायं 05:15 बजे सेवद छोटी (सीकर) से
+              दीपपुरा, सीकर के लिए प्रस्थान करेगी।
+            </p>
+          </div>
+        </section>
+
+        <section class="blk rv">
+          <h2 class="serif">दो परिवार, एक नया रिश्ता</h2>
+          <p class="sub">नून · औला</p>
+          <div class="sh">
+            "दो आँगन महके आज, एक ही बहार में,<br />रिश्तों की डोर बँधी है, प्यार
+            के त्योहार में।"
+          </div>
+          <div class="svg-divider" aria-hidden="true">
+            <svg viewBox="0 0 220 32" fill="none">
+              <!-- Left line with leaf -->
+              <line
+                x1="0"
+                y1="16"
+                x2="78"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M78 16 Q84 10 90 16 Q84 22 78 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="90"
+                y1="16"
+                x2="96"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <!-- Center mandala -->
+              <circle
+                cx="110"
+                cy="16"
+                r="10"
+                stroke="var(--gold)"
+                stroke-width="0.8"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="6"
+                stroke="var(--rose)"
+                stroke-width="0.8"
+                opacity="0.7"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="2.5"
+                fill="var(--rose)"
+                opacity="0.8"
+              />
+              <circle
+                cx="110"
+                cy="6"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="26"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="100"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="120"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle cx="103" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="103" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <!-- Right line with leaf -->
+              <line
+                x1="124"
+                y1="16"
+                x2="130"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M130 16 Q136 10 142 16 Q136 22 130 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="142"
+                y1="16"
+                x2="220"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+            </svg>
+          </div>
+          <div class="card">
+            <div class="av" style="background: var(--rose)">वि</div>
+            <h3 class="serif">चि. विनोद</h3>
+            <p>सुपौत्र: श्रीमती छोटी देवी एवं स्व. श्री टीकू जी</p>
+            <p>सुपुत्र: श्रीमती मौहनी देवी एवं श्री गंगा राम जी</p>
+            <p>निवासी सेवद छोटी, सीकर</p>
+          </div>
+          <div class="sang" aria-hidden="true">
+            <div>
+              <svg viewBox="0 0 24 22" fill="none" width="20" height="20">
+                <path
+                  d="M12 20 C6 15 2 11 2 7 C2 4 4 2 7 2 C9 2 11 3 12 5 C13 3 15 2 17 2 C20 2 22 4 22 7 C22 11 18 15 12 20 Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="card">
+            <div class="av" style="background: var(--sage)">अ</div>
+            <h3 class="serif">सौ.का. अनिता</h3>
+            <p>सुपौत्री: श्रीमती देवी एवं श्री जी</p>
+            <p>सुपुत्री: श्रीमती देवी एवं श्री जी</p>
+            <p>निवासी दिपपुरा, सीकर</p>
+          </div>
+          <div style="margin-top: 22px">
+            <details>
+              <summary>ननिहाल पक्ष</summary>
+              <p>
+                <b>नानी-नानाजी:</b> श्रीमती माना देवी – श्री भगवानाराम जी<br /><b
+                  >मामी-मामाजी:</b
+                >
+                श्रीमती देवी – श्री जी<br />निवासी: सेवद छोटी, सीकर
+              </p>
+            </details>
+            <details>
+              <summary>फूफा पक्ष</summary>
+              <p>
+                संतोष देवी – श्री दूदाराम जी कलवानियां<br />प्रेम देवी – श्री
+                मोहन जी महला<br />मंजू देवी – श्री प्यारेलाल जी ढ़ाका<br />कमला
+                देवी – श्री रमेश जी सामोता<br />निर्मला देवी – श्री ताराचन्द जी
+                खीचड़
+              </p>
+            </details>
+            <details>
+              <summary>बड़भती पक्ष</summary>
+              <p>
+                गणपतजी, गोविन्द जी, मोहन जी, शिवपाल जी, भागीरथ जी, श्रवण जी एवं
+                समस्त बिसु परिवार<br />निवास: सेवद छोटी
+              </p>
+            </details>
+            <details>
+              <summary>जंवाई पक्ष</summary>
+              <p>अनिता – शिशराम जी</p>
+            </details>
+            <details>
+              <summary>स्वागतकर्ता, बाल मनुहार एवं भैया–भाभी</summary>
+              <p>
+                <b>स्वागतकर्ता:</b> अशोक, अभिशैक, मनिश<br /><b>बाल मनुहार:</b>
+                गाैलू, दीयांशा<br /><b>भैया–भाभी:</b> अभिशैक – ईन्द्रा<br /><b
+                  >विशेष आग्रह:</b
+                >
+                हरीश बिसु
+              </p>
+            </details>
+            <details>
+              <summary>दर्शनाभिलाषी</summary>
+              <p>अशोक, अभिशैक, मनिश, ईन्द्रा, एवं समस्त नून परिवार।</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="blk rv">
+          <h2 class="serif">आपका इंतज़ार रहेगा</h2>
+          <p class="sub">आपकी हाँ ही हमारी सबसे बड़ी ख़ुशी है</p>
+          <div class="sh">
+            "आपके क़दमों से महकेगा हमारा आँगन,<br />आपकी दुआओं से सजेगा ये पावन
+            बंधन।"
+          </div>
+          <div class="svg-divider" aria-hidden="true">
+            <svg viewBox="0 0 220 32" fill="none">
+              <!-- Left line with leaf -->
+              <line
+                x1="0"
+                y1="16"
+                x2="78"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M78 16 Q84 10 90 16 Q84 22 78 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="90"
+                y1="16"
+                x2="96"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <!-- Center mandala -->
+              <circle
+                cx="110"
+                cy="16"
+                r="10"
+                stroke="var(--gold)"
+                stroke-width="0.8"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="6"
+                stroke="var(--rose)"
+                stroke-width="0.8"
+                opacity="0.7"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="2.5"
+                fill="var(--rose)"
+                opacity="0.8"
+              />
+              <circle
+                cx="110"
+                cy="6"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="26"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="100"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="120"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle cx="103" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="103" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <!-- Right line with leaf -->
+              <line
+                x1="124"
+                y1="16"
+                x2="130"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M130 16 Q136 10 142 16 Q136 22 130 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="142"
+                y1="16"
+                x2="220"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+            </svg>
+          </div>
+          <div class="slide" id="slide">
+            <div class="pf" id="pf"></div>
+            <div class="lbl" id="lbl">स्लाइड करके कहिए, हम आ रहे हैं</div>
+            <button
+              class="handle"
+              id="handle"
+              aria-label="निमंत्रण स्वीकार करें"
+            >
+              ➜
+            </button>
+          </div>
+          <p class="note">
+            कृपया महिलाओं का निमंत्रण भी इसी पत्रिका द्वारा स्वीकार करें।
+          </p>
+        </section>
+
+        <section class="blk rv">
+          <h2 class="serif">हमसे बात कीजिए</h2>
+          <p class="sub">उत्तराकांक्षी · मु.पो. सेवद छोटी, जिला सीकर (राज.)</p>
+          <div class="svg-divider" aria-hidden="true">
+            <svg viewBox="0 0 220 32" fill="none">
+              <!-- Left line with leaf -->
+              <line
+                x1="0"
+                y1="16"
+                x2="78"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M78 16 Q84 10 90 16 Q84 22 78 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="90"
+                y1="16"
+                x2="96"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <!-- Center mandala -->
+              <circle
+                cx="110"
+                cy="16"
+                r="10"
+                stroke="var(--gold)"
+                stroke-width="0.8"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="6"
+                stroke="var(--rose)"
+                stroke-width="0.8"
+                opacity="0.7"
+              />
+              <circle
+                cx="110"
+                cy="16"
+                r="2.5"
+                fill="var(--rose)"
+                opacity="0.8"
+              />
+              <circle
+                cx="110"
+                cy="6"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="110"
+                cy="26"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="100"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle
+                cx="120"
+                cy="16"
+                r="1.5"
+                fill="var(--gold)"
+                opacity="0.6"
+              />
+              <circle cx="103" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="9" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="103" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <circle cx="117" cy="23" r="1" fill="var(--rose)" opacity="0.5" />
+              <!-- Right line with leaf -->
+              <line
+                x1="124"
+                y1="16"
+                x2="130"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+              <path
+                d="M130 16 Q136 10 142 16 Q136 22 130 16 Z"
+                fill="var(--rose)"
+                opacity="0.5"
+              />
+              <line
+                x1="142"
+                y1="16"
+                x2="220"
+                y2="16"
+                stroke="var(--line)"
+                stroke-width="1"
+              />
+            </svg>
+          </div>
+          <div class="ct">
+            <div class="av" style="background: var(--rose)">ग</div>
+            <div>
+              <h3>गंगा राम</h3>
+              <p>9610615586</p>
+            </div>
+            <a class="btn" href="tel:+919610615586">कॉल</a>
+          </div>
+          <div class="ct">
+            <div class="av" style="background: var(--sage)">म</div>
+            <div>
+              <h3>मौहनी देवी</h3>
+              <p>8696684318</p>
+            </div>
+            <a class="btn" href="tel:+918696684318">कॉल</a>
+          </div>
+          <a
+            class="btn main"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Chainpura+Sikar+Rajasthan"
+            target="_blank"
+            rel="noopener"
+            >Google Maps में लोकेशन देखें</a
+          >
+        </section>
+
+        <div class="wave-sep" aria-hidden="true">
+          <svg viewBox="0 0 520 40" preserveAspectRatio="none" fill="none">
+            <path
+              d="M0 20 Q65 5 130 20 Q195 35 260 20 Q325 5 390 20 Q455 35 520 20"
+              stroke="var(--rose)"
+              stroke-width="1.5"
+              opacity="0.4"
+            />
+            <path
+              d="M0 26 Q65 11 130 26 Q195 41 260 26 Q325 11 390 26 Q455 41 520 26"
+              stroke="var(--gold)"
+              stroke-width="1"
+              opacity="0.3"
+            />
+            <!-- Diamonds on wave peaks -->
+            <rect
+              x="128"
+              y="17"
+              width="4"
+              height="4"
+              fill="var(--rose)"
+              opacity="0.5"
+              transform="rotate(45 130 20)"
+            />
+            <rect
+              x="258"
+              y="17"
+              width="4"
+              height="4"
+              fill="var(--gold)"
+              opacity="0.5"
+              transform="rotate(45 260 20)"
+            />
+            <rect
+              x="388"
+              y="17"
+              width="4"
+              height="4"
+              fill="var(--rose)"
+              opacity="0.5"
+              transform="rotate(45 390 20)"
+            />
+          </svg>
+        </div>
+        <footer>
+          <div class="sh">
+            "दुआओं में याद रखिएगा, दिल से बुला रहे हैं,<br />आपके इंतज़ार में
+            पलकें बिछा रहे हैं।"
+          </div>
+          <!-- Footer lotus SVG -->
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              margin: 20px 0 16px;
+              opacity: 0.6;
+            "
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 120 60" fill="none" width="120" height="60">
+              <path
+                d="M60 56 C40 40 36 20 60 10 C84 20 80 40 60 56 Z"
+                fill="var(--rose)"
+                opacity="0.4"
+                stroke="var(--rose)"
+                stroke-width="1"
+              />
+              <path
+                d="M60 52 C44 42 36 28 44 16 C52 8 62 20 60 52 Z"
+                fill="var(--rose)"
+                opacity="0.3"
+                stroke="var(--rose)"
+                stroke-width="0.8"
+              />
+              <path
+                d="M60 52 C76 42 84 28 76 16 C68 8 58 20 60 52 Z"
+                fill="var(--rose)"
+                opacity="0.3"
+                stroke="var(--rose)"
+                stroke-width="0.8"
+              />
+              <path
+                d="M60 50 C38 44 24 30 34 12 C44 2 60 16 60 50 Z"
+                fill="var(--gold)"
+                opacity="0.2"
+                stroke="var(--gold)"
+                stroke-width="0.6"
+              />
+              <path
+                d="M60 50 C82 44 96 30 86 12 C76 2 60 16 60 50 Z"
+                fill="var(--gold)"
+                opacity="0.2"
+                stroke="var(--gold)"
+                stroke-width="0.6"
+              />
+              <circle cx="60" cy="42" r="4" fill="var(--gold)" opacity="0.7" />
+              <circle cx="60" cy="42" r="2" fill="var(--gold)" />
+              <path
+                d="M30 56 Q45 52 60 56 Q75 60 90 56"
+                stroke="var(--rose)"
+                stroke-width="1"
+                opacity="0.4"
+              />
+            </svg>
+          </div>
+          <b>नून परिवार का स्नेह भरा निमंत्रण 🙏</b>आपकी उपस्थिति ही हमारे लिए
+          सबसे बड़ा आशीर्वाद है।
+        </footer>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        var $ = function (s) {
+            return document.querySelector(s);
+          },
+          $$ = function (s) {
+            return Array.prototype.slice.call(document.querySelectorAll(s));
+          };
+        var clamp = function (v, a, b) {
+          return Math.min(
+            b === undefined ? 1 : b,
+            Math.max(a === undefined ? 0 : a, v),
+          );
+        };
+
+        /* petals */
+        var pw = $("#petals");
+        for (var i = 0; i < 14; i++) {
+          var p = document.createElement("span");
+          p.className = "petal";
+          p.style.cssText =
+            "left:" +
+            Math.random() * 100 +
+            "%;--s:" +
+            (8 + Math.random() * 9) +
+            "px;--dur:" +
+            (16 + Math.random() * 14) +
+            "s;--del:-" +
+            Math.random() * 26 +
+            "s;--dx:" +
+            (Math.random() - 0.5) * 160 +
+            "px";
+          pw.appendChild(p);
+        }
+
+        /* timed intro: every state plays by itself, tap moves on, nobody can miss one */
+        var intro = $("#intro"),
+          enso = $("#enso"),
+          scr = $$(".scr"),
+          segs = $$(".segs i"),
+          steps = [0.2, 0.4, 0.6, 0.8, 0.97],
+          cur = -1,
+          timer,
+          DUR = 2600;
+        function go(n) {
+          clearTimeout(timer);
+          cur = n;
+          enso.style.strokeDashoffset = 440 * (1 - steps[n]);
+          scr.forEach(function (s, k) {
+            s.classList.toggle("on", k === n);
+          });
+          segs.forEach(function (s) {
+            s.className = "";
+          });
+          void intro.offsetWidth;
+          segs.forEach(function (s, k) {
+            s.className = k < n || n === 4 ? "full" : k === n ? "act" : "";
+          });
+          intro.classList.toggle("done", n === 4);
+          intro.classList.toggle("s0", n === 0);
+          if (n < 4)
+            timer = setTimeout(function () {
+              go(n + 1);
+            }, DUR);
+        }
+        var opening = false;
+        function burst(cx, cy) {
+          if (matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+          var box = document.createElement("div");
+          box.className = "cf";
+          box.style.transform = "translate(" + cx + "px," + cy + "px)";
+          document.body.appendChild(box);
+          var cols = ["#c9737f", "#e8a0aa", "#b99345", "#f3c6cc"];
+          for (var i = 0; i < 48; i++) {
+            var e = document.createElement("i");
+            e.style.background = cols[i % 4];
+            box.appendChild(e);
+            var a = Math.random() * Math.PI * 2,
+              v = 90 + Math.random() * 230;
+            e.animate(
+              [
+                { transform: "translate(0,0) rotate(0) scale(.4)", opacity: 1 },
+                {
+                  transform:
+                    "translate(" +
+                    Math.cos(a) * v +
+                    "px," +
+                    (Math.sin(a) * v - 70) +
+                    "px) rotate(" +
+                    Math.random() * 500 +
+                    "deg) scale(1.1)",
+                  opacity: 1,
+                  offset: 0.5,
+                },
+                {
+                  transform:
+                    "translate(" +
+                    Math.cos(a) * v * 1.1 +
+                    "px," +
+                    (Math.sin(a) * v + 170) +
+                    "px) rotate(800deg) scale(1)",
+                  opacity: 0,
+                },
+              ],
+              {
+                duration: 2000 + Math.random() * 900,
+                easing: "cubic-bezier(.2,.7,.4,1)",
+                fill: "forwards",
+              },
+            );
+          }
+          setTimeout(function () {
+            box.remove();
+          }, 3200);
+        }
+        function openInv() {
+          if (opening) return;
+          opening = true;
+          clearTimeout(timer);
+          /* Immediate visual feedback so user knows tap worked */
+          var ob = document.getElementById("open");
+          if (ob) {
+            ob.disabled = true;
+            ob.textContent = "खुल रहा है…";
+          }
+          var sb = document.getElementById("skip");
+          if (sb) {
+            sb.disabled = true;
+          }
+          try {
+            startMusic();
+          } catch (e) {}
+          intro.classList.add("love");
+          setTimeout(function () {
+            var r = $(".hw").getBoundingClientRect();
+            burst(r.left + r.width / 2, r.top + r.height / 2);
+            try {
+              navigator.vibrate && navigator.vibrate([40, 130, 40]);
+            } catch (e) {}
+          }, 1150);
+          setTimeout(function () {
+            try {
+              navigator.vibrate && navigator.vibrate([40, 130, 40]);
+            } catch (e) {}
+          }, 2250);
+          setTimeout(function () {
+            intro.classList.add("gone");
+            document.body.classList.remove("lock");
+          }, 3000);
+          setTimeout(function () {
+            document.documentElement.classList.add("opened");
+            setTimeout(function () {
+              var h = $("#hsh");
+              if (h) h.classList.add("in");
+            }, 2300);
+          }, 3300);
+          setTimeout(function () {
+            intro.hidden = true;
+            document.body.classList.remove("lock");
+            scrollTo(0, 0);
+            update();
+          }, 4200);
+        }
+        intro.addEventListener("click", function (e) {
+          if (opening || e.target.closest("button")) return;
+          if (cur < 4) go(cur + 1);
+        });
+        ["skip", "open"].forEach(function (id) {
+          var b = document.getElementById(id);
+          /* Single pointerup listener prevents double-fire on touch (touchend+click race) */
+          b.addEventListener("pointerup", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openInv();
+          });
+        });
+        setTimeout(function () {
+          go(0);
+        }, 350);
+
+        /* scroll: state-based (positions, not speed), so fast or slow swipes end in the same place */
+        var bar = $("#bar"),
+          tl = $("#tl"),
+          fill = $("#fill"),
+          rows = $$(".row");
+        function update() {
+          var root = document.documentElement;
+          bar.style.transform =
+            "scaleX(" +
+            clamp(scrollY / Math.max(1, root.scrollHeight - innerHeight)) +
+            ")";
+          var tr = tl.getBoundingClientRect(),
+            mark = innerHeight * 0.7;
+          fill.style.height =
+            clamp(mark - tr.top - 10, 0, Math.max(0, tr.height - 20)) + "px";
+          rows.forEach(function (r) {
+            var b = r.getBoundingClientRect();
+            r.classList.toggle("done", b.top + b.height / 2 < mark);
+          });
+        }
+        var tick = false;
+        addEventListener(
+          "scroll",
+          function () {
+            if (!tick) {
+              tick = true;
+              requestAnimationFrame(function () {
+                update();
+                tick = false;
+              });
+            }
+          },
+          { passive: true },
+        );
+        addEventListener("resize", update);
+        update();
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.04 },
+        );
+        $$(".rv").forEach(function (el) {
+          io.observe(el);
+        });
+        var io2 = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io2.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.6 },
+        );
+        $$(".sh").forEach(function (el) {
+          var i = 0;
+          el.innerHTML = el.innerHTML
+            .split("<br>")
+            .map(function (l) {
+              return (
+                '<span style="display:block">' +
+                l
+                  .trim()
+                  .split(/\s+/)
+                  .map(function (w) {
+                    return (
+                      '<span class="w" style="--i:' + i++ + '">' + w + "</span>"
+                    );
+                  })
+                  .join(" ") +
+                "</span>"
+              );
+            })
+            .join("");
+          if (!el.closest(".hero")) io2.observe(el);
+        });
+
+        /* countdown */
+        var target = new Date("2026-11-24T17:15:00+05:30").getTime();
+        function cd() {
+          var t = target - Date.now();
+          if (t <= 0) {
+            $("#d").textContent =
+              $("#h").textContent =
+              $("#m").textContent =
+              $("#s").textContent =
+                "0";
+            $("#cdmsg").textContent =
+              "बारात के प्रस्थान का समय हो चुका है। फेरों की शुभ घड़ी रात्रि में है, आप भी पधारिए।";
+            return;
+          }
+          var s = Math.floor(t / 1000);
+          $("#d").textContent = Math.floor(s / 86400);
+          $("#h").textContent = Math.floor((s % 86400) / 3600);
+          $("#m").textContent = Math.floor((s % 3600) / 60);
+          $("#s").textContent = s % 60;
+        }
+        cd();
+        setInterval(cd, 1000);
+
+        /* guest name from link: ...#Rakesh-Sharma-Ji  (or ?to=Rakesh Sharma) */
+        var GN = (function () {
+          var r = "";
+          try {
+            var q = new URLSearchParams(location.search);
+            r =
+              q.get("to") ||
+              q.get("name") ||
+              q.get("guest") ||
+              decodeURIComponent((location.hash || "").slice(1)).replace(
+                /^(to|name|guest)[=:]/i,
+                "",
+              );
+          } catch (e) {}
+          return r
+            .replace(/[-_+]+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+            .slice(0, 40);
+        })();
+        var gnm = $("#gname");
+        if (GN) {
+          $("#gs1").textContent = "सादर निमंत्रण";
+          gnm.textContent = GN;
+          $("#gs2").textContent = "आपको सपरिवार आमंत्रित करते हैं";
+          if (GN.length > 14) gnm.classList.add("sm");
+          $("#hto").textContent =
+            GN + ", आपके आने से ही हमारी ख़ुशी पूरी होगी।";
+        } else {
+          $("#gs1").textContent = "मान्यवर स्नेही स्वजन";
+          gnm.textContent = "आप सपरिवार";
+          $("#gs2").textContent = "सादर आमंत्रित हैं";
+          $("#hto").hidden = true;
+        }
+        $("#gnh").innerHTML = $("#gn").outerHTML.replace('id="gn"', "");
+
+        /* soft romantic background music (synthesised: piano-like melody + pad, low volume) */
+        var AC,
+          mst,
+          bus,
+          mOn = false,
+          mStarted = false,
+          nextT = 0,
+          ci = 0,
+          B = 0.95;
+        var CH = [
+            [60, 64, 67, 71],
+            [57, 60, 64, 67],
+            [53, 57, 60, 64],
+            [55, 59, 62, 67],
+          ],
+          PD = [
+            [48, 52, 55, 59],
+            [45, 48, 52, 55],
+            [41, 45, 48, 52],
+            [43, 47, 50, 55],
+          ],
+          BS = [36, 33, 29, 31],
+          AR = [0, 1, 2, 3, 2, 1, 3, 2],
+          ML = [
+            [
+              [0, 76, 1.5],
+              [1.5, 79, 0.5],
+              [2, 76, 1],
+              [3, 74, 1],
+            ],
+            [
+              [0, 72, 1.5],
+              [1.5, 76, 0.5],
+              [2, 74, 1],
+              [3, 72, 1],
+            ],
+            [
+              [0, 69, 1.5],
+              [1.5, 72, 0.5],
+              [2, 77, 1],
+              [3, 76, 1],
+            ],
+            [
+              [0, 74, 2],
+              [2, 71, 1],
+              [3, 67, 1],
+            ],
+          ];
+        function fq(m) {
+          return 440 * Math.pow(2, (m - 69) / 12);
+        }
+        function pluck(m, t, d, g) {
+          [1, 2].forEach(function (h) {
+            var o = AC.createOscillator(),
+              e = AC.createGain();
+            o.type = "sine";
+            o.frequency.value = fq(m) * h;
+            e.gain.setValueAtTime(0, t);
+            e.gain.linearRampToValueAtTime(g / (h * h), t + 0.015);
+            e.gain.exponentialRampToValueAtTime(0.0001, t + d + 1.6);
+            o.connect(e);
+            e.connect(bus);
+            o.start(t);
+            o.stop(t + d + 1.7);
+          });
+        }
+        function pad(m, t, d, g) {
+          [-5, 5].forEach(function (c) {
+            var o = AC.createOscillator(),
+              e = AC.createGain();
+            o.type = "triangle";
+            o.frequency.value = fq(m);
+            o.detune.value = c;
+            e.gain.setValueAtTime(0, t);
+            e.gain.linearRampToValueAtTime(g, t + 1.4);
+            e.gain.setValueAtTime(g, t + d - 0.2);
+            e.gain.linearRampToValueAtTime(0, t + d + 1.6);
+            o.connect(e);
+            e.connect(bus);
+            o.start(t);
+            o.stop(t + d + 1.7);
+          });
+        }
+        function chordAt(t, i) {
+          var d = 4 * B;
+          PD[i].forEach(function (m) {
+            pad(m, t, d, 0.02);
+          });
+          pluck(BS[i], t, d * 0.9, 0.14);
+          for (var k = 0; k < 8; k++)
+            pluck(
+              CH[i][AR[k]] + (k % 4 === 3 ? 12 : 0),
+              t + (k * B) / 2,
+              0.4,
+              0.05,
+            );
+          ML[i].forEach(function (n) {
+            pluck(n[1], t + n[0] * B, n[2] * B, 0.12);
+          });
+        }
+        function sched() {
+          if (!AC || AC.state !== "running") return;
+          if (nextT < AC.currentTime) nextT = AC.currentTime + 0.1;
+          while (nextT < AC.currentTime + 3) {
+            chordAt(nextT, ci);
+            nextT += 4 * B;
+            ci = (ci + 1) % 4;
+          }
+        }
+        function irb(sec, dec) {
+          var n = AC.sampleRate * sec,
+            b = AC.createBuffer(2, n, AC.sampleRate);
+          for (var c = 0; c < 2; c++) {
+            var d = b.getChannelData(c);
+            for (var i = 0; i < n; i++)
+              d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, dec);
+          }
+          return b;
+        }
+        function setMus(on) {
+          mOn = on;
+          $("#mus").innerHTML = on
+            ? `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2 preview-icon"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>`
+            : `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-off preview-icon"><path d="M16 9a5 5 0 0 1 .95 2.293"/><path d="M19.364 5.636a9 9 0 0 1 1.889 9.96"/><path d="m2 2 20 20"/><path d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"/><path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686"/></svg>`;
+          if (mst) {
+            mst.gain.cancelScheduledValues(AC.currentTime);
+            mst.gain.setTargetAtTime(on ? 0.55 : 0, AC.currentTime, 0.5);
+          }
+        }
+        function startMusic() {
+          if (mStarted) {
+            if (AC && AC.state === "suspended" && mOn) AC.resume();
+            return;
+          }
+          var C = window.AudioContext || window.webkitAudioContext;
+          if (!C) return;
+          try {
+            AC = new C();
+            mst = AC.createGain();
+            mst.gain.setValueAtTime(0, AC.currentTime);
+            var cv = AC.createConvolver(),
+              wet = AC.createGain(),
+              dry = AC.createGain(),
+              lp = AC.createBiquadFilter();
+            cv.buffer = irb(3.4, 2.2);
+            wet.gain.value = 0.5;
+            dry.gain.value = 0.75;
+            lp.type = "lowpass";
+            lp.frequency.value = 2800;
+            lp.connect(dry);
+            lp.connect(cv);
+            cv.connect(wet);
+            dry.connect(mst);
+            wet.connect(mst);
+            mst.connect(AC.destination);
+            bus = lp;
+            mStarted = true;
+            AC.resume();
+            mst.gain.linearRampToValueAtTime(0.55, AC.currentTime + 5);
+            mOn = true;
+            $("#mus").innerHTML =
+              `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2 preview-icon"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>`;
+            nextT = AC.currentTime + 0.2;
+            sched();
+            setInterval(sched, 600);
+          } catch (e) {}
+        }
+        $("#mus").addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (!mStarted) {
+            startMusic();
+            return;
+          }
+          setMus(!mOn);
+          if (mOn && AC.state === "suspended") AC.resume();
+        });
+        document.addEventListener("click", function (e) {
+          if (!mStarted && !e.target.closest("#mus")) startMusic();
+        });
+        document.addEventListener("visibilitychange", function () {
+          if (!AC) return;
+          if (document.hidden) AC.suspend();
+          else if (mOn) AC.resume();
+        });
+
+        /* slide to accept */
+        var sl = $("#slide"),
+          hd = $("#handle"),
+          pf = $("#pf"),
+          lbl = $("#lbl"),
+          drag = false,
+          x0 = 0,
+          x = 0,
+          max = 0,
+          ok = false;
+        function setX(v) {
+          x = v;
+          hd.style.transform = "translateX(" + v + "px)";
+          pf.style.width = v + 34 + "px";
+        }
+        function confetti() {
+          if (matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+          var b = hd.getBoundingClientRect(),
+            box = document.createElement("div");
+          box.className = "cf";
+          box.style.transform =
+            "translate(" +
+            (b.left + b.width / 2) +
+            "px," +
+            (b.top + b.height / 2) +
+            "px)";
+          document.body.appendChild(box);
+          var cols = ["#c9737f", "#e8a0aa", "#b99345", "#7f9f86"];
+          for (var i = 0; i < 40; i++) {
+            var e = document.createElement("i");
+            e.style.background = cols[i % 4];
+            box.appendChild(e);
+            var a = Math.random() * Math.PI * 2,
+              v = 80 + Math.random() * 170;
+            e.animate(
+              [
+                { transform: "translate(0,0) rotate(0)", opacity: 1 },
+                {
+                  transform:
+                    "translate(" +
+                    Math.cos(a) * v +
+                    "px," +
+                    (Math.sin(a) * v - 90) +
+                    "px) rotate(" +
+                    Math.random() * 540 +
+                    "deg)",
+                  opacity: 1,
+                  offset: 0.55,
+                },
+                {
+                  transform:
+                    "translate(" +
+                    Math.cos(a) * v * 1.1 +
+                    "px," +
+                    (Math.sin(a) * v + 150) +
+                    "px) rotate(800deg)",
+                  opacity: 0,
+                },
+              ],
+              {
+                duration: 1800 + Math.random() * 800,
+                easing: "cubic-bezier(.2,.7,.4,1)",
+                fill: "forwards",
+              },
+            );
+          }
+          setTimeout(function () {
+            box.remove();
+          }, 2800);
+        }
+        function accept() {
+          if (ok) return;
+          ok = true;
+          max = sl.clientWidth - hd.offsetWidth - 8;
+          sl.classList.add("back");
+          setX(max);
+          sl.classList.add("ok");
+          lbl.textContent =
+            "शुक्रिया" +
+            (GN ? " " + GN : "") +
+            "! आपके आने से रौनक दुगुनी हो जाएगी।";
+          hd.textContent = "✓";
+          confetti();
+        }
+        hd.addEventListener("pointerdown", function (e) {
+          if (ok) return;
+          drag = true;
+          x0 = e.clientX - x;
+          max = sl.clientWidth - hd.offsetWidth - 8;
+          sl.classList.remove("back");
+          hd.setPointerCapture(e.pointerId);
+        });
+        hd.addEventListener("pointermove", function (e) {
+          if (drag) setX(clamp(e.clientX - x0, 0, max));
+        });
+        function end() {
+          if (!drag) return;
+          drag = false;
+          if (x > max * 0.8) accept();
+          else {
+            sl.classList.add("back");
+            setX(0);
+          }
+        }
+        hd.addEventListener("pointerup", end);
+        hd.addEventListener("pointercancel", end);
+        hd.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            accept();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
